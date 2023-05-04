@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clone Youtube</title>
+    <style>
+
+      @import url('https://fonts.googleapis.com/css2?family=Handlee&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+      
+      *{
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+         font-family: Roboto;
+      }
+        
+         header{
+            width:1250px;
+            height: 56px;
+        }
+
+        .container01{
+            width:1300;
+            height:56px;
+            padding: 0px 30px;
+            left: 0px;
+            top: 0px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .item01-menu{
+            width:168px;
+            height:55px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 20px;
+        }
+         .menuicon{
+            width:23px;
+            
+         }
+
+         .logoyoutube{
+            width:90px;
+            height:20px;
+         }
+
+         .item02-search{
+            width:500px;
+            height:40px;
+            background: rgb(255, 255, 255);
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding-top: 8px;
+         }
+
+         .inputsearch{
+            width:395px;
+            height:39px;
+            border:1px solid gray;
+            border-radius: 40px 0 0 40px;
+         }
+
+         input {
+            text-align:
+         }
+
+         .lupaicon{
+            width:20px;
+            height:20px;
+            margin: 10px;
+         }
+
+         .button-search{
+            width: 60px;
+            height: 39px;
+            background-color: rgb(237, 235, 235);
+            border: 1px solid rgb(224, 223, 223);
+            border-radius: 0 40px 40px 0;
+         }
+
+         .item03-buttons{
+            width: 225px;
+            height: 40px;
+            background: rgb(255, 255, 255);
+         }
+
+         .item03-buttons-style{
+            width: 155px;
+            height: 40px;
+            background-color: rgb(255, 255, 255);
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 10px;
+         }
+
+         .imageright01{
+            width:25px;
+            height: 25px;
+         }
+         .imageright02{
+            width:25px;
+            height: 25px;
+         }
+         .imageright03{
+            width:35px;
+            height: 35px;
+         }
+
+         .container-main{
+            width:940px;
+            height: 746px;
+            position: relative;
+            top: 40px;
+            left:50px;
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 0px;
+            gap:16px;
+
+         }
+
+         .video{
+            width:800px;
+            height:520px;
+
+         }
+
+         .nome-video{
+            font-family: Roboto;
+            font-weight: 600;
+            font-size: 18px;
+            text-align: left;
+            top: 550px;
+         }
+
+         .video-actions{
+            width: 800px;
+            height:42px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            top: 500px;
+            padding: 0px;
+            gap: 42px;
+         }
+
+         .channel-infos{
+            height: 42px;
+            width: 160px;
+            left: 0px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 0px;
+            gap: 12px;
+
+         }
+         .logodio-texto{
+            font-size: 10px;
+         }
+
+         .button-subscrible{
+            background: red;
+            width: 120px;
+            height: 40px;
+            border-radius: 2px;
+            border-style: none;
+
+         }
+         .button-text{
+            width:80px;
+            height: 16px;
+            margin-left:20px;
+            color:white;
+            text-align: center;
+            font-size: 12px;
+
+         }
+
+         .item-like{
+            width: 63px;
+            height: 24px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 10px;
+         }
+
+         .like{
+            width:18px;
+            height:18px;
+         }
+
+         .item-deslike{
+            width: 100px;
+            height: 24px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 10px;
+         }
+
+         .deslike{
+            width:18px;
+            height: 18px;
+         }
+
+         .item-share{
+            width:115px;
+            height:24px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 10px;
+         }
+
+         .share{
+            width:18px;
+            height:18px;
+         }
+
+         .text-like{
+            font-size: 12px;
+         }
+
+         .visualizacoes{
+            width: 391px;
+            height:16px;
+            top: 500px;
+         }
+
+         .visualizacoes{
+            font-size: 14px;
+            font-weight: 600;
+         }
+
+         .t-v-i{
+            font-weight: 510px;
+            height:64px;
+            margin-right: 350px;
+         }
+
+         .text-video-info{
+            font-size: 14px;
+            font-weight:400;
+         }
+
+         .sidebar{
+            width:350px;
+            height: 750px;
+            position: absolute;
+            display:flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0;
+            gap: 15px;
+            left: 900px;
+            top: 10px;
+         }
+
+         .img-sidebar{
+            width: 160px;
+            height: 90px;
+         }
+
+         .bloco01{
+            width: 330px;
+            height: 120px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+         }
+
+         .text-video-p{
+            width:196px;
+            height:89px;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+         }
+
+         .titulo-video-p{
+            font-size: 14px;
+            font-weight: 600;
+         }
+
+         .dio{
+            font-size: 12px;
+            font-weight: 400;
+         }
+
+         .visu{
+            font-size: 12px;
+            font-weight: 400;
+         }
+
+
+
+   </style>
+</head>
+<body>
+    <header>
+        <div class="container01">
+            
+            <div class="item01-menu">
+                <img class="menuicon" src="./Imagens/menuicon.png">
+                <img class="logoyoutube" src="./Imagens/youtube1.png">
+            </div>
+            
+            <div class="item02-search">
+                <input class="inputsearch" type="text" placeholder="Pesquisar">
+                <button class="button-search" type="submit"><img class="lupaicon" src="./Imagens/lupaicon.png"></button>
+                
+            </div>
+
+            <div class="item03-buttons">
+                <div class="item03-buttons-style">
+                    <img class="imageright01" src="./Imagens/videocam.svg">
+                    <img class="imageright02" src="./Imagens/sino.svg">
+                    <img class="imageright03" src="./Imagens/fotoperfil.png">
+                </div>
+            
+            </div>
+        
+        </div>
+    </header>
+
+    <main>
+      <div class="container-main">
+         
+         <img class="video" src="./Imagens/image2.png">
+         <p class="nome-video">Semana Front-end | Dia 01: Construindo uma Landing Page no Mundo Invertido com HTML e CSS</p>
+
+         <div class="video-actions">
+            
+            <div class="channel-infos">
+               <img class="logodio" src="./Imagens/logodio.png">
+               <p class="logodio-texto"><b>DIO</b> <br>83,3 mil inscritos</p>
+            </div>
+
+            <button class="button-subscrible"><div class="button-text">INSCREVA-SE</div></button>
+                  
+            <div class="item-like">
+               <img class="like" src="./Imagens/like.png">
+               <p class="text-like">2 mil</p>
+            </div>
+               
+            <div class="item-deslike">
+               <img class="deslike" src="./Imagens/deslike.png">
+               <p class="text-like">Não gostei</p> 
+            </div>
+               
+            <div class="item-share">
+               <img class="share" src="./Imagens/shareicon.png">
+                <p class="text-like">Compartilhar</p>
+            </div>
+         
+         </div>
+
+         
+         <p class="visualizacoes">28.418 visualizações  Transmitido ao vivo em 23 ago. de 2022</p>
+            
+         <div class="t-v-i"><p class="text-video-info">Inicie uma aventura imersiva no mundo do Front-end com HTML e CSS. Para isso, criaremos uma landing page com a temática da série Stranger Things, a qual contará com a implementação de um theme switcher (light e dark) para explorarmos os mistérios do mundo invertido.</p></div>
+   
+         
+         
+         <div class="sidebar">
+            
+            <div class="bloco01">
+               <img class="img-sidebar" src="./Imagens/image1.png">
+               <div class="text-video-p">
+                  <p class="titulo-video-p">Geração Tech Unimed - BH - Ciência de Dados</p>
+                  <p class="dio">DigitalInnovationOne</p>
+                  <p class="visu">2,1 mil visualizações
+                     Transmitido há 2 dias</p>
+               </div>
+            </div>
+            
+            <div class="bloco01">
+               <img class="img-sidebar" src="./Imagens/image12.png">
+               <div class="text-video-p">
+                  <p class="titulo-video-p">Scrum Talks</p>
+                  <p class="dio">DigitalInnovationOne</p>
+                  <p class="visu">1,6 mil visualizações
+                     Transmitido há 3 dias</p>
+               </div>
+            </div>
+            
+            <div class="bloco01">
+               <img class="img-sidebar" src="./Imagens/image13.png">
+               <div class="text-video-p">
+                  <p class="titulo-video-p">Machine Learning Avançado - Fast Track</p>
+                  <p class="dio">DigitalInnovationOne</p>
+                  <p class="visu">1,7 mil visualizações
+                     Transmitido há 4 dias</p>
+               <div>
+            </div>
+         
+         </div>
+
+            
+      </div>
+    </main>
+</body>
+</html>
